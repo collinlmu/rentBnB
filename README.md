@@ -2,7 +2,7 @@
 
 ## **Database Schema**
 
-![alt text](image.png)
+![alt text](/images/dbSchema.png)
 
 ## **API documentation**
 
