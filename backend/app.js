@@ -18,7 +18,7 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(express.json());
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = environment === "production";
 
 //Security Middleware
 if (!isProduction) {
