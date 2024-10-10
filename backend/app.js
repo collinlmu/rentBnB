@@ -18,6 +18,8 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(express.json());
 
+const isProduction = process.env.NODE_ENV === "production";
+
 //Security Middleware
 if (!isProduction) {
     //enable cors only in development
@@ -68,8 +70,6 @@ app.use((err, _req, _res, next) => {
     }
     next(err);
 });
-
-const isProduction = process.env.NODE_ENV === "production";
 
 app.use((err, _req, res, _next) => {
     res.status(err.status || 500);
