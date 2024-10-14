@@ -11,8 +11,7 @@ const { ValidationError } = require("sequelize");
 const { environment } = require("./config");
 
 const app = express();
-
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
 app.use(morgan("dev"));
 app.use(cookieParser());
@@ -44,11 +43,10 @@ app.use(
     })
 );
 
-app.use(routes);
-
 // app.listen(PORT, () => {
 //     console.log(`Server is running on http://localhost:${PORT}`);
 // });
+app.use(routes);
 
 app.use((_req, _res, next) => {
     const err = new Error("The requested resource couldn't be found.");

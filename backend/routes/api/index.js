@@ -1,5 +1,4 @@
 // backend/routes/api/index.js
-const express = require("express");
 const router = require("express").Router();
 const sessionRouter = require("./session");
 const usersRouter = require("./users");
