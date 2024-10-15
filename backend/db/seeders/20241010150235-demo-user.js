@@ -20,7 +20,9 @@ module.exports = {
          *   isBetaMember: false
          * }], {});
          */
+        options.tableName = "Users";
         await User.bulkCreate(
+            options,
             [
                 {
                     email: "demo@user.io",
